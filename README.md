@@ -1,4 +1,4 @@
-# poweRanger <img src="media/hexlogo.png"" align="right" height="140"/>
+# poweRanger <img src="media/hexlogo.png" align="right" height="200"/>
 
 > *In the deep forest live the echoes from the past*
 
@@ -14,11 +14,11 @@ Genotype-environment association (GEA) methods ask: *which parts of the genome v
 
 Gradient Forest asks a different question: **where along an environmental gradient does the genome change most?**
 
-Instead of a p-value per locus, it produces a cumulative turnover function F(x) per predictor — a curve that shows at which values of, say, mean annual temperature, allele frequencies shift the fastest across the landscape. The area under that curve, weighted by the out-of-bag R² of each locus model, becomes a biologically meaningful unit of compositional change that is comparable across predictors and across loci.
+Instead of a p-value per locus, it produces a cumulative turnover function F(x) per predictor per site across individuals — a curve that shows at which values of, say, mean annual temperature, allele frequencies shift the fastest across the landscape. The area under that curve, weighted by the out-of-bag R² of each locus model, becomes a biologically meaningful unit of compositional change that is comparable across predictors and across loci.
 
 This makes Gradient Forest particularly strong when:
 
-- **Population structure is weak or absent** — no latent factor correction needed, the signal lives in the split density of the trees
+- **Population structure is weak, absent or simply unknown** — no latent factor correction needed, the signal lives in the split density of the trees
 - **Relationships are non-linear or threshold-driven** — random forests capture any shape of response without transformation or model selection
 - **Many loci contribute small effects** — the ensemble aggregation rewards polygenic signal that univariate tests miss
 - **You need to know *where*, not just *whether*** — the turnover curve localises the genomic response along the gradient, which is essential for genetic offset and assisted gene flow predictions
