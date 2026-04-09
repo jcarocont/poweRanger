@@ -1,0 +1,138 @@
+url: https://yourusername.github.io/poweRanger
+
+template:
+  bootstrap: 5
+  bslib:
+    # ── base dark theme ──────────────────────────────────────────────────────
+    preset: "darkly"
+
+    # ── colour palette (from logo) ───────────────────────────────────────────
+    primary:         "#4caf50"   # bright green (staff glow)
+    secondary:       "#2e7d32"   # deep forest green
+    success:         "#66bb6a"
+    info:            "#81c784"
+    warning:         "#ffb300"
+    danger:          "#e53935"
+    light:           "#e8f5e9"
+    dark:            "#1b2e1c"
+
+    # ── backgrounds ─────────────────────────────────────────────────────────
+    bg:              "#0d1f0e"   # very dark forest floor
+    fg:              "#e8f5e9"   # light mint text
+
+    # ── typography ───────────────────────────────────────────────────────────
+    base_font:       {google: "Inter"}
+    heading_font:    {google: "Fira Sans"}
+    code_font:       {google: "Fira Code"}
+    font-size-base:  "1rem"
+
+    # ── navbar ───────────────────────────────────────────────────────────────
+    navbar-bg:       "#0d1f0e"
+    navbar-dark-color:          "#a5d6a7"
+    navbar-dark-hover-color:    "#4caf50"
+    navbar-dark-active-color:   "#69f0ae"
+
+    # ── code blocks ──────────────────────────────────────────────────────────
+    code-bg:         "#132914"
+    code-color:      "#69f0ae"
+
+    # ── links ────────────────────────────────────────────────────────────────
+    link-color:      "#69f0ae"
+    link-hover-color: "#b9f6ca"
+
+  includes:
+    in_header: |
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+
+home:
+  title: "poweRanger — Gradient Forest for ranger models"
+  description: >
+    Gradient Forest variance partitioning and turnover curve analysis
+    for ranger random forest models. Supports classic per-locus GF
+    and RDA-Forest polygenic workflows.
+
+  links:
+  - text: "Report a bug"
+    href: https://github.com/yourusername/poweRanger/issues
+  - text: "Browse source"
+    href: https://github.com/yourusername/poweRanger
+
+navbar:
+  structure:
+    left:  [intro, articles, reference]
+    right: [search, github]
+
+  components:
+    intro:
+      text: "Get started"
+      href: articles/intro-theory.html
+
+    articles:
+      text: "Articles"
+      menu:
+      - text: "── I. The Algorithm ──────────────"
+      - text: "What is Gradient Forest?"
+        href: articles/intro-theory.html
+
+      - text: "── II. Using poweRanger ──────────"
+      - text: "Fitting GF models"
+        href: articles/gf-fitting.html
+      - text: "Turnover curves"
+        href: articles/gf-curves.html
+      - text: "Plots and diagnostics"
+        href: articles/gf-plots.html
+
+      - text: "── III. Genetic Offset ───────────"
+      - text: "Concepts and theory"
+        href: articles/offset-concepts.html
+      - text: "Present-day baseline"
+        href: articles/offset-present.html
+      - text: "Future projections"
+        href: articles/offset-future.html
+      - text: "Comparing scenarios"
+        href: articles/offset-comparison.html
+      - text: "Visualisation and interpretation"
+        href: articles/offset-viz.html
+
+      - text: "── IV. RDA-Forest ────────────────"
+      - text: "Concepts and embedding space"
+        href: articles/rdaforest-concepts.html
+      - text: "Fitting, curves and plots"
+        href: articles/rdaforest-fitting.html
+      - text: "Interpretation"
+        href: articles/rdaforest-interpretation.html
+
+    github:
+      icon: fa-github
+      href: https://github.com/yourusername/poweRanger
+      aria-label: GitHub
+
+reference:
+- title: "Core workflow"
+  desc: "Main functions in order of use"
+  contents:
+  - filter_models
+  - turnover_curves
+  - gf_summarise
+
+- title: "Plots"
+  desc: "Visualisation functions — each returns a named list of ggplots"
+  contents:
+  - plot_curves
+  - plot_envelope
+  - plot_quantile
+  - plot_heatmap
+  - plot_importance
+  - plot_diagnostic
+  - save_plots
+
+- title: "Classes"
+  desc: "S3 objects returned by the package"
+  contents:
+  - new_gf_result
+  - new_gf_summary
+
+footer:
+  structure:
+    left: developed_by
+    right: built_with
