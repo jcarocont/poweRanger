@@ -1,0 +1,19 @@
+[package]
+version = "0.1.0"
+title = "Gradient Forest Variance Partitioning on Ranger Models"
+description = "Implements the gradient forest algorithm as a post-hoc analysis suite for ranger random forest models. Computes turnover curves, importance rankings, and diagnostic summaries."
+license = "MIT"
+
+[authors]
+[[authors.person]]
+name = "Juan Caro"
+email = "jcaro.cont@gmail.com"
+role = ["aut", "cre"]
+
+[imports]
+dplyr >= 1.1.0
+tibble
+ggplot2
+purrr
+ranger
+stats

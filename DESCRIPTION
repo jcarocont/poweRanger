@@ -1,11 +1,17 @@
 Package: poweRanger
-Title: Package poweRanger
-Version: 0.0.0.9000
-Authors: Who wrote it
-Maintainer: The Maintainer <yourself@somewhere.net>
-Description: Tools for poweRanger analysis.
+Title: Gradient Forest Variance Partitioning on Ranger Models
+Version: 0.1.0
+Authors@R: person("Juan", "Caro", email = "jcaro.cont@gmail.com", role = c("aut", "cre"))
+Description: Implements the gradient forest algorithm as a post-hoc analysis suite for ranger random forest models. Computes turnover curves, importance rankings, and diagnostic summaries.
 License: MIT
+URL: {{ URL }}
+BugReports: {{ BugReports }}
 Encoding: UTF-8
 LazyData: true
-Roxygen: list(markdown = TRUE)
+Imports: 
+    dplyr (>= 1.1.0),
+    ggplot2,
+    purrr,
+    ranger,
+    tibble
 RoxygenNote: 7.3.3
